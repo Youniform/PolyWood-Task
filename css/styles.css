@@ -1,0 +1,175 @@
+@font-face {
+    font-family: 'GothamRounded-Medium';
+    src:  url('fonts/GothamRounded-Medium.otf') format('otf');
+}
+:root {
+
+    /* Colors: */
+    --mid-grey: #CBCBCB;
+    --light-grey: #F6F6F6;
+    --dark-grey: #4A4A4A;
+    --unnamed-color-55565a: #55565A;
+
+    /* Font/text values */
+    --unnamed-font-family-gotham-rounded: 'GothamRounded-Medium';
+    --unnamed-font-style-italic: italic;
+    --unnamed-font-style-normal: normal;
+    --unnamed-font-weight-normal: normal;
+    --unnamed-font-weight-medium: medium;
+    --unnamed-font-size-19: 19px;
+    --unnamed-font-size-24: 24px;
+    --unnamed-font-size-30: 30px;
+    --unnamed-character-spacing-0-99: 0.99px;
+    --unnamed-character-spacing-0-63: 0.63px;
+    --unnamed-character-spacing-0-79: 0.79px;
+    --unnamed-line-spacing-30: 30px;
+    --unnamed-line-spacing-36: 36px;
+    --unnamed-line-spacing-39: 39px;
+    --unnamed-text-transform-uppercase: uppercase;
+}
+
+/* Character Styles */
+.-quote-text {
+    font-family: var(--unnamed-font-family-gotham-rounded);
+    font-style: var(--unnamed-font-style-italic);
+    font-weight: var(--unnamed-font-weight-normal);
+    font-size: var(--unnamed-font-size-30);
+    line-height: var(--unnamed-line-spacing-39);
+    letter-spacing: var(--unnamed-character-spacing-0-99);
+    color: var(--unnamed-color-55565a);
+}
+.bodycopy-text {
+    font-family: var(--unnamed-font-family-gotham-rounded);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-normal);
+    font-size: var(--unnamed-font-size-19);
+    line-height: var(--unnamed-line-spacing-30);
+    letter-spacing: var(--unnamed-character-spacing-0-63);
+    color: var(--unnamed-color-55565a);
+}
+.alt-sub-header-text {
+    font-family: var(--unnamed-font-family-gotham-rounded);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-normal);
+    font-size: var(--unnamed-font-size-24);
+    line-height: var(--unnamed-line-spacing-39);
+    letter-spacing: var(--unnamed-character-spacing-0-79);
+    color: var(--unnamed-color-55565a);
+}
+.sub-header-text {
+    font-family: var(--unnamed-font-family-gotham-rounded);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-normal);
+    font-size: var(--unnamed-font-size-30);
+    line-height: var(--unnamed-line-spacing-39);
+    letter-spacing: var(--unnamed-character-spacing-0-99);
+    color: var(--unnamed-color-55565a);
+}
+.header-text {
+    font-family: var(--unnamed-font-family-gotham-rounded);
+    font-style: var(--unnamed-font-style-normal);
+    font-weight: var(--unnamed-font-weight-medium);
+    font-size: var(--unnamed-font-size-30);
+    line-height: var(--unnamed-line-spacing-36);
+    letter-spacing: var(--unnamed-character-spacing-0-99);
+    color: var(--dark-grey);
+    text-transform: var(--unnamed-text-transform-uppercase);
+}
+h2 {
+    display: flex;
+    flex-basis: 100%;
+    align-items: center;
+    color: rgba(0, 0, 0, 0.35);
+    margin: 8px 0px;
+}
+h2::before,
+h2::after {
+    content: "";
+    flex-grow: 1;
+    background: rgba(0, 0, 0, 0.35);
+    height: 1px;
+    font-size: 0px;
+    line-height: 0px;
+    margin: 0px 8px;
+}
+
+/* <div> Styles */
+.parent-container {
+    max-width:1440px;
+    width:100%;
+    padding:6.25%;
+    display:flex;
+    border:2px solid grey;
+    align-self:center;
+    justify-self:center;
+    margin:0 auto;
+}
+.container {
+    width: 100%;
+    display: flex;
+}
+.row {
+    flex-direction: row;
+    flex-wrap: nowrap;
+}
+.column {
+    flex-direction: column;
+}
+
+/* Section Content */
+.image-left {
+    left: 0;
+    max-width: 30%;
+    margin-right:2%;
+}
+.copy-wrapper {
+    width: 55%;
+}
+
+
+
+/* Only for development */
+.dev-borders {
+    border: 2px solid blue;
+    box-sizing: border-box;
+}
+
+/* Testimonial */
+.testimonial {
+    font: var(--unnamed-font-style-italic) normal var(--unnamed-font-weight-normal) 28px/var(--unnamed-line-spacing-39) var(--unnamed-font-family-gotham-rounded);
+    color: var(--unnamed-color-55565a);
+    background: var(--light-grey) 0% 0% no-repeat padding-box;
+    text-align: center;
+    font: italic normal normal 28px/39px Gotham Rounded;
+    letter-spacing: 0.92px;
+    color: #55565A;
+    opacity: 1;
+}
+.testimonial-copy {
+    width: 56%;
+
+}
+.testimonial-name {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-medium) 28px/var(--unnamed-line-spacing-39) var(--unnamed-font-family-gotham-rounded);
+    color: var(--unnamed-color-55565a);
+    text-align: center;
+    font: normal normal medium 28px/39px Gotham Rounded;
+    letter-spacing: 0.92px;
+    color: #55565A;
+    opacity: 1;
+}
+.testimonial-product {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 13px/19px var(--unnamed-font-family-gotham-rounded);
+    color: var(--unnamed-color-55565a);
+    text-align: center;
+    font: normal normal normal 13px/19px Gotham Rounded;
+    letter-spacing: 0.43px;
+    color: #55565A;
+    opacity: 1;
+}
+.testimonial-img {
+    width: 37%;
+    background-image:url('../assets/la-casa-cafe-5-piece-dining-set-review.png');
+    background-size: cover;
+    opacity: 1;
+}
