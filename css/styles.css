@@ -139,7 +139,9 @@
     background: transparent url('/assets/Group 90.png') 0% 0% no-repeat padding-box;
     opacity: 1;
 }
-
+.accordion-button.collapsed::after {
+    background: url("/assets/plus-sign.png");
+}
 /* Place Desktop Only CSS Below */
 @media screen and (min-width:  1024px) {
 
