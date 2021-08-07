@@ -1,31 +1,41 @@
+/** Re-arranged these Stylings to reflect MOBILE first best practices since it is far easier to modify a working layout for mobile to change for desktop */
 @font-face {
-    font-family: 'GothamRounded-Medium';
-    src:  url('fonts/GothamRounded-Medium.otf') format('otf');
+    font-family:  Gotham Rounded;
+    src:  url(fonts/GothamRounded-Bold.otf) format(opentype);
+    src:  url(fonts/GothamRounded-BoldItalic.otf) format(opentype);
+    src:  url(fonts/GothamRounded-Book.otf) format(opentype);
+    src:  url(fonts/GothamRounded-BookItalic.otf) format(opentype);
+    src:  url(fonts/GothamRounded-Light.otf) format(opentype);
+    src:  url(fonts/GothamRounded-LightItalic.otf) format(opentype);
+    src:  url(fonts/GothamRounded-Medium.otf) format(opentype);
+    src:  url(fonts/GothamRounded-MediumItalic.otf) format(opentype);
 }
+
+/* Default CSS Given from XD */
 :root {
 
-    /* Colors: */
-    --mid-grey: #CBCBCB;
-    --light-grey: #F6F6F6;
-    --dark-grey: #4A4A4A;
-    --unnamed-color-55565a: #55565A;
+/* Colors: */
+--mid-grey: #CBCBCB;
+--light-grey: #F6F6F6;
+--dark-grey: #4A4A4A;
+--unnamed-color-55565a: #55565A;
 
-    /* Font/text values */
-    --unnamed-font-family-gotham-rounded: 'GothamRounded-Medium';
-    --unnamed-font-style-italic: italic;
-    --unnamed-font-style-normal: normal;
-    --unnamed-font-weight-normal: normal;
-    --unnamed-font-weight-medium: medium;
-    --unnamed-font-size-19: 19px;
-    --unnamed-font-size-24: 24px;
-    --unnamed-font-size-30: 30px;
-    --unnamed-character-spacing-0-99: 0.99px;
-    --unnamed-character-spacing-0-63: 0.63px;
-    --unnamed-character-spacing-0-79: 0.79px;
-    --unnamed-line-spacing-30: 30px;
-    --unnamed-line-spacing-36: 36px;
-    --unnamed-line-spacing-39: 39px;
-    --unnamed-text-transform-uppercase: uppercase;
+/* Font/text values */
+--unnamed-font-family-gotham-rounded: Gotham Rounded;
+--unnamed-font-style-italic: italic;
+--unnamed-font-style-normal: normal;
+--unnamed-font-weight-normal: normal;
+--unnamed-font-weight-medium: medium;
+--unnamed-font-size-19: 19px;
+--unnamed-font-size-24: 24px;
+--unnamed-font-size-30: 30px;
+--unnamed-character-spacing-0-99: 0.99px;
+--unnamed-character-spacing-0-63: 0.63px;
+--unnamed-character-spacing-0-79: 0.79px;
+--unnamed-line-spacing-30: 30px;
+--unnamed-line-spacing-36: 36px;
+--unnamed-line-spacing-39: 39px;
+--unnamed-text-transform-uppercase: uppercase;
 }
 
 /* Character Styles */
@@ -75,79 +85,19 @@
     color: var(--dark-grey);
     text-transform: var(--unnamed-text-transform-uppercase);
 }
-h2 {
-    display: flex;
-    flex-basis: 100%;
-    align-items: center;
-    color: rgba(0, 0, 0, 0.35);
-    margin: 8px 0px;
-}
-h2::before,
-h2::after {
-    content: "";
-    flex-grow: 1;
-    background: rgba(0, 0, 0, 0.35);
-    height: 1px;
-    font-size: 0px;
-    line-height: 0px;
-    margin: 0px 8px;
-}
-
-/* <div> Styles */
-.parent-container {
-    max-width:1440px;
-    width:100%;
-    padding:6.25%;
-    display:flex;
-    border:2px solid grey;
-    align-self:center;
-    justify-self:center;
-    margin:0 auto;
-}
-.container {
-    width: 100%;
-    display: flex;
-}
-.row {
-    flex-direction: row;
-    flex-wrap: nowrap;
-}
-.column {
-    flex-direction: column;
-}
-
-/* Section Content */
-.image-left {
-    left: 0;
-    max-width: 30%;
-    margin-right:2%;
-}
-.copy-wrapper {
-    width: 55%;
-}
-
-
-
-/* Only for development */
-.dev-borders {
-    border: 2px solid blue;
-    box-sizing: border-box;
-}
-
-/* Testimonial */
-.testimonial {
-    font: var(--unnamed-font-style-italic) normal var(--unnamed-font-weight-normal) 28px/var(--unnamed-line-spacing-39) var(--unnamed-font-family-gotham-rounded);
-    color: var(--unnamed-color-55565a);
-    background: var(--light-grey) 0% 0% no-repeat padding-box;
+.center {
     text-align: center;
-    font: italic normal normal 28px/39px Gotham Rounded;
-    letter-spacing: 0.92px;
-    color: #55565A;
+}
+.why-polywood > * {
+    margin-top: 20px;
+}
+.testimonial {
+    background: var(--light-grey) 0% 0% no-repeat padding-box;
+    background: #F6F6F6 0% 0% no-repeat padding-box;
     opacity: 1;
 }
-.testimonial-copy {
-    width: 56%;
-
+.testimonial-image {
+    max-width: 100%;
 }
 .testimonial-name {
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-medium) 28px/var(--unnamed-line-spacing-39) var(--unnamed-font-family-gotham-rounded);
@@ -167,9 +117,31 @@ h2::after {
     color: #55565A;
     opacity: 1;
 }
-.testimonial-img {
-    width: 37%;
-    background-image:url('../assets/la-casa-cafe-5-piece-dining-set-review.png');
-    background-size: cover;
+.icon {
+    width: 84px;
+    height: 84px;
+    margin: 10px auto;
+
+}
+.icon.weather {
+    background: transparent url('/assets/Group 87.png') 0% 0% no-repeat padding-box;
     opacity: 1;
+}
+.icon.maintainance {
+    background: transparent url('/assets/Group 88.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+.icon.durability {
+    background: transparent url('/assets/Group 89.png') 0% 0% no-repeat padding-box;
+    opacity: 1;   
+}
+.icon.sustainability {
+    background: transparent url('/assets/Group 90.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+}
+
+/* Place Desktop Only CSS Below */
+@media screen and (min-width:  1024px) {
+
+
 }
