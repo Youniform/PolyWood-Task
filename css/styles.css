@@ -36,6 +36,10 @@
 --unnamed-line-spacing-36: 36px;
 --unnamed-line-spacing-39: 39px;
 --unnamed-text-transform-uppercase: uppercase;
+
+/* Star Ratings */
+--star-color: #f2b01e;
+--star-default-color: #f0f0f0;
 }
 
 /* Character Styles */
@@ -84,6 +88,7 @@
     letter-spacing: var(--unnamed-character-spacing-0-99);
     color: var(--dark-grey);
     text-transform: var(--unnamed-text-transform-uppercase);
+    margin-top: 34px;
 }
 .center {
     text-align: center;
@@ -222,8 +227,184 @@
     opacity: 1;
 }
 
+.color-swatch {
+    display: flex;
+    align-self: center;
+    align-items: center;
+    justify-content: middle;
+    flex-direction:  row;
+    margin-top: 47px;
+}
+.color-swatch img {
+    width: 50%;
+    margin: 0 auto;
+}
+.more-colors {
+    border: 1px solid var(--dark-grey);
+    border: 1px solid #4A4A4A;
+    border-radius: 5px;
+    opacity: 1;
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-medium) 14px/19px var(--unnamed-font-family-gotham-rounded);
+    color: var(--dark-grey);
+    text-align: center;
+    font: normal normal medium 14px/19px Gotham Rounded;
+    letter-spacing: 1.02px;
+    color: #4A4A4A;
+    text-transform: uppercase;
+    opacity: 1;
+    margin-top: 34px;
+}
+.outdoor-dining-header {
+    margin-top:52px;
+}
+#on-the-patio {
+    background: transparent url('/assets/PWS121-1-GY-LI-1.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    width: 397px;
+    height: 278px;
+    margin: 0 auto;
+}
+#by-the-pool {
+    background: transparent url('/assets/PWS261-1-WH-LI-1.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    width: 397px;
+    height: 278px;
+    margin: 0 auto;
+}
+#on-the-front-porch {
+    background: transparent url('/assets/PWS156-1-SA902-LI-1.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    width: 397px;
+    height: 278px;
+    margin: 0 auto;
+}
+.product-type {
+    margin-top: 10px;
+}
+.product-type img {
+    max-width: 100%;
+    height: auto;
+}
+
+button.shop.all-dining-sets {
+    border: 1px solid var(--dark-grey);
+    border-radius: 5px;
+    opacity: 1;
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-medium) 14px/19px var(--unnamed-font-family-gotham-rounded);
+    color: var(--dark-grey);
+    text-align: center;
+    font: normal normal medium 14px/19px Gotham Rounded;
+    letter-spacing: 1.02px;
+    color: #4A4A4A;
+    text-transform: uppercase;
+    opacity: 1;
+}
+.footer-banner {
+    margin-top: 20px;
+    background: transparent url('/assets/Group 139.png') 0% 0% no-repeat padding-box;
+    opacity: 1;
+    width: 100%;
+    height: 363px;
+}
+.round-thumb {
+    width: 125px;
+    height: 125px;
+    float: left;
+}
+.review1 {
+    background: transparent url('/assets/lakeside-7-piece-farmhouse-dining-set-review.png') 0% 0% no-repeat padding-box;
+    border: 2px solid #FAFAFA;
+    opacity: 1;
+}
+.review2 {
+    background: transparent url('/assets/vineyard-9-piece-dining-set-review.png') 0% 0% no-repeat padding-box;
+    border: 2px solid #FAFAFA;
+    opacity: 1;
+}
+.review3 {
+    background: transparent url('/assets/la-casa-cafe-3-piece-bar-set-review.png') 0% 0% no-repeat padding-box;
+    border: 2px solid #FAFAFA;
+    opacity: 1;
+}
+.stars {
+    width: 80px;
+    height: 20px;
+}
+.star {
+    background: #EFC659 0% 0% no-repeat padding-box;
+    width: 17px;
+    height: 16px;
+    opacity: 1;
+    margin-left: 2px;
+    float: left;
+}
+.review {
+    display: block;
+}
+.review-content {
+    float: left;
+    margin-left: 5px;
+}
+.review-content .quote {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 12px/19px var(--unnamed-font-family-gotham-rounded);
+    color: var(--unnamed-color-55565a);
+    text-align: left;
+    font: normal normal normal 12px/19px Gotham Rounded;
+    letter-spacing: 0.4px;
+    color: #55565A;
+    opacity: 1;
+    max-width: 240px;
+}
+.float-clear {
+    float: none;
+    clear: both;
+    width: 100%;
+}
+/* Star Rating */
+
+.rating-box {
+  color: var(--star-default-color);
+  text-shadow: 0px 1px 10px rgba(0, 0, 0, 1);
+  left: 0;
+  height: 0.5rem;
+  width: 4.16rem;
+}
+
+.rating-star{
+  font-size: 0.5rem;
+  width: 0.5rem;
+  height: 0.5rem;
+  padding: 0 0.3rem;
+  position: relative;
+  display: block;
+  float:left;
+}
+
+.full-star:before {
+  color: var(--star-color);
+  content: "\2605";
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+}
+
+.empty-star:before {
+  content: "\2605";
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+}
+
+.half-star:before {
+  color: --var(star-color);
+  content: "\2605";
+  width: 50%;
+  position: absolute;
+  left: 0;
+  overflow: hidden;
+}
+
 /* Place Desktop Only CSS Below */
 @media screen and (min-width:  1024px) {
-
 
 }
