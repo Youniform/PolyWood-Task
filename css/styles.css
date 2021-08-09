@@ -411,7 +411,7 @@ button.shop.all-dining-sets {
     height: 20px;
 }
 .star {
-    background: #EFC659 0% 0% no-repeat padding-box;
+    background:0% 0% no-repeat padding-box;
     width: 17px;
     height: 16px;
     opacity: 1;
@@ -444,7 +444,6 @@ button.shop.all-dining-sets {
 
 .rating-box {
   color: var(--star-default-color);
-  text-shadow: 0px 1px 10px rgba(0, 0, 0, 1);
   left: 0;
   height: 0.5rem;
   width: 4.16rem;
