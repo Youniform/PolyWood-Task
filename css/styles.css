@@ -1,15 +1,41 @@
 /** Re-arranged these Stylings to reflect MOBILE first best practices since it is far easier to modify a working layout for mobile to change for desktop */
-@font-face {
-    font-family:  Gotham Rounded;
-    src:  url(fonts/GothamRounded-Bold.otf) format(opentype);
-    src:  url(fonts/GothamRounded-BoldItalic.otf) format(opentype);
-    src:  url(fonts/GothamRounded-Book.otf) format(opentype);
-    src:  url(fonts/GothamRounded-BookItalic.otf) format(opentype);
-    src:  url(fonts/GothamRounded-Light.otf) format(opentype);
-    src:  url(fonts/GothamRounded-LightItalic.otf) format(opentype);
-    src:  url(fonts/GothamRounded-Medium.otf) format(opentype);
-    src:  url(fonts/GothamRounded-MediumItalic.otf) format(opentype);
+/**@font-face {
+    font-family:'Gotham Rounded';
+    src:  url(fonts/GothamRounded-Bold.otf) format('opentype');
+    font-weight: 600;
+    font-style: normal;
 }
+@font-face {
+    font-family:'Gotham Rounded' ;
+    src:  url(fonts/GothamRounded-BoldItalic.otf) format('opentype');
+    font-weight: 600;
+    font-style: italic;
+}*/
+@font-face {
+    font-family:'Gotham Rounded';
+    src:  url(fonts/GothamRounded-Medium.otf) format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family:'Gotham Rounded';
+    src:  url(fonts/GothamRounded-MediumItalic.otf) format('opentype');
+    font-weight: 200;
+    font-style: italic;
+}
+@font-face {
+    font-family:'Gotham Rounded';
+    src:  url(fonts/GothamRounded-Light.otf) format('opentype');
+    font-weight: 200;
+    font-style: normal;
+}
+@font-face {
+    font-family:'Gotham Rounded';
+    src:  url(fonts/GothamRounded-LightItalic.otf) format('opentype');
+    font-weight: 200;
+    font-style: italic;
+}
+
 
 /* Default CSS Given from XD */
 :root {
@@ -41,6 +67,7 @@
 --star-color: #f2b01e;
 --star-default-color: #f0f0f0;
 }
+
 
 /* Character Styles */
 .-quote-text {
@@ -82,13 +109,57 @@
 .header-text {
     font-family: var(--unnamed-font-family-gotham-rounded);
     font-style: var(--unnamed-font-style-normal);
-    font-weight: var(--unnamed-font-weight-medium);
+    font-weight: 400;
     font-size: var(--unnamed-font-size-30);
     line-height: var(--unnamed-line-spacing-36);
     letter-spacing: var(--unnamed-character-spacing-0-99);
     color: var(--dark-grey);
     text-transform: var(--unnamed-text-transform-uppercase);
     margin-top: 34px;
+    display: flex;
+}
+.header-text:before, .header-text:after {
+    content: '';
+    flex: 1;
+    border-bottom: groove 2px;
+    margin:  auto 1.0em;
+    /*box-shadow: 0 -1px;*/
+}
+.row {
+    margin-top: 20px;
+}
+#why-polywood {
+    max-width: 100%;
+}
+#why-polywood p {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 18px/var(--unnamed-line-spacing-39) var(--unnamed-font-family-gotham-rounded);
+    color: var(--unnamed-color-55565a);
+    text-align: left;
+    font: normal normal normal 18px/39px Gotham Rounded;
+    letter-spacing: 0.59px;
+    color: #55565A;
+}
+.pros p {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 16px/var(--unnamed-line-spacing-30) var(--unnamed-font-family-gotham-rounded);
+    color: var(--unnamed-color-55565a);
+    text-align: center;
+    font: normal normal normal 16px/30px Gotham Rounded;
+    letter-spacing: 0.53px;
+    color: #55565A;
+    opacity: 1;
+}
+.pros .icon-label {
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) var(--unnamed-font-size-30)/var(--unnamed-line-spacing-39) var(--unnamed-font-family-gotham-rounded);
+    letter-spacing: var(--unnamed-character-spacing-0-99);
+    color: var(--unnamed-color-55565a);
+    text-align: center;
+    font: normal normal normal 30px/39px Gotham Rounded;
+    letter-spacing: 0.99px;
+    color: #55565A;
+    opacity: 1;
+}
+.break-word {
+    word-wrap: break-word;
 }
 .center {
     text-align: center;
@@ -96,10 +167,20 @@
 .why-polywood > * {
     margin-top: 20px;
 }
+.why-polywood p:nth-last-of-type(0) {
+    margin-top: 30px;
+}
 .testimonial {
     background: var(--light-grey) 0% 0% no-repeat padding-box;
-    background: #F6F6F6 0% 0% no-repeat padding-box;
     opacity: 1;
+    padding-left: 2.0em;
+    padding-right: 2.0em;
+    padding-top: 1.0em;
+    font: var(--unnamed-font-style-italic) normal var(--unnamed-font-weight-normal) 28px/var(--unnamed-line-spacing-39) var(--unnamed-font-family-gotham-rounded);
+    color: var(--unnamed-color-55565a);
+    text-align: center;
+    letter-spacing: 0.92px;
+    color: #55565A;
 }
 .testimonial-image {
     max-width: 100%;
@@ -112,6 +193,7 @@
     letter-spacing: 0.92px;
     color: #55565A;
     opacity: 1;
+    font-style: normal;
 }
 .testimonial-product {
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 13px/19px var(--unnamed-font-family-gotham-rounded);
@@ -153,7 +235,6 @@
 }
 .inlay-testimonial {
     background-color:  var(--light-grey);
-    margin-top: 20px;
 }
 .inlay-testimonial-image {
     max-width: 100%;
@@ -226,7 +307,6 @@
     text-transform: uppercase;
     opacity: 1;
 }
-
 .color-swatch {
     display: flex;
     align-self: center;

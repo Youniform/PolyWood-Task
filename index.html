@@ -4,10 +4,12 @@
 <html>
     <head>
         <meta charset=UTF-8>
-        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">-->
+        <!-- <link href="/css/bootstrap-5.0.2-dist/css/bootstrap-grid.min.css" rel="stylesheet" type="text/css"/> -->
+        <link href="css/bootstrap-5.0.2-dist/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
         <link href="./css/styles.css" rel="stylesheet" type="text/css"/>
 
-        <!-- <link href="./css/simple-grid/grid/simple-grid.css" rel="stylesheet" type="text/css"/> -->
     </head>
     <body>
         <div class="container">
@@ -18,18 +20,18 @@
             </div>
             <div class="row why-polywood">
                 <div class="col-lg-4 center">
-                    <img src="assets/PWS433-1-WH-LI.png"/>
+                    <img id="why-polywood" src="assets/PWS433-1-WH-LI.png"/>
                 </div>
                 <div class="col-lg-8">
-                        <p class="bodycopy-text">POLYWOOD outdoor dining sets are designed with your family in mind. We’ve created durable outdoor dining tables and chairs that coordinate perfectly to make sets that can continually meet the dining demands and style preferences of any household. Whether you have a large family and favor a <u>9-piece outdoor dining set</u> or <u>7-piece outdoor dining set</u> with a rustic farmhouse design or have a smaller family with more contemporary tastes and desire a 5-piece outdoor dining set, there’s a curated outdoor dining set perfect for you.</p>
-                        <p class="bodycopy-text"> Our modern outdoor dining sets are not only stylish — they’re sustainable too! All of our outdoor dining table and chairs are constructed from genuine POLYWOOD lumber, a durable material made using recycled ocean-bound and landfill-bound high-density polyethylene (HDPE) plastic. Our HDPE lumber is low-maintenance, easy to clean, can handle any outdoor climate, and keeps our planet healthy.</p>
+                        <p class="bodycopy-text break-word">POLYWOOD outdoor dining sets are designed with your family in mind. We’ve created durable outdoor dining tables and chairs that coordinate perfectly to make sets that can continually meet the dining demands and style preferences of any household. Whether you have a large family and favor a <u>9-piece outdoor dining set</u> or <u>7-piece outdoor dining set</u> with a rustic farmhouse design or have a smaller family with more contemporary tastes and desire a 5-piece outdoor dining set, there’s a curated outdoor dining set perfect for you.</p>
+                        <p class="bodycopy-text break-word"> Our modern outdoor dining sets are not only stylish — they’re sustainable too! All of our outdoor dining table and chairs are constructed from genuine POLYWOOD lumber, a durable material made using recycled ocean-bound and landfill-bound high-density polyethylene (HDPE) plastic. Our HDPE lumber is low-maintenance, easy to clean, can handle any outdoor climate, and keeps our planet healthy.</p>
                 </div>
             </div>
             <div class="row">
                 <div class="col-lg-9 testimonial">
-                    <div class="testimonial-copy">
+                    <div class="testimonial-copy center">
                         <p class="-quote-text">"The customer service is excellent. I would receive an email throughout, giving me the status. Then I needed to change my delivery address and the lady who helped me was prompt and efficient and very kind. I would recommend this product to anyone who wants too quality and professional service. Thank you!"</p>
-                        <div class="testimonial-name">- D A</div>
+                        <div class="testimonial-name"><strong>- D A</strong></div>
                         <div class="testimonial-product">La Casa Café 5-Piece Dining Set - PWS132-1</div>
                     </div>
                 </div>
@@ -45,26 +47,26 @@
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 center">
+                <div class="col-lg-6 center pros">
                     <div class="icon weather"></div>
                     <div class="icon-label">Weather Resistance</div>
                     <p>Our genuine POLYWOOD lumber can handle all types of weather from hot desert heat to the most frigid blizzards.</p>
                 </div>
-                <div class="col-lg-6 center">
+                <div class="col-lg-6 center pros">
                     <div class="icon maintainance"></div>
-                        <div class="icon-label">Maintainence</div>
+                        <div class="icon-label">Low Maintainence</div>
                         <p>All POLYWOOD furniture is easy to clean and never needs to be painted, stained, or waterproofed.</p>
                 </div>
             </div>
             <div class="row">
-                <div class="col-lg-6 center">
+                <div class="col-lg-6 center pros">
                     <div class="icon durability"></div>
                     <div class="icon-label">Durability</div>
                     <p>We proudly back our genuine POLYWOOD lumber with a 20-year residential warranty.</p>                    
                 </div>
-                <div class="col-lg-6 center">
+                <div class="col-lg-6 center pros">
                     <div class="icon sustainability"></div>
-                    <div class="icon-label"></div>
+                    <div class="icon-label">Sustainability</div>
                     <p>We give ocean-bound and landfill-bound plastic containers a second life by recycling them into our genuine POLYWOOD lumber.</p>                 
                 </div>
             </div>   
@@ -75,13 +77,13 @@
             </div>
             <div class="row">
                 <div class="accordion accordion-flush">
-                    <div class="accordion-item">
+                    <div class="accordion-item" id="faq-accordion">
                         <h2 class="accordion-header" id="headingOne">
                             <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
                             Can you leave POLYWOOD dining sets outside all year long?
                             </button>
                         </h2>
-                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                        <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#faq-accordion">
                             <div class="accordion-body">
                                 POLYWOOD furniture is built to live outdoors in every season. You can leave it outside all year long and can trust that it won’t get damaged by harsh weather or environmental stressors.
                             </div>
@@ -93,7 +95,7 @@
                         Can you mix and match chairs and tables to make your own POLYWOOD dining set?
                         </button>
                     </h2>
-                    <div id="collapseTwo" class="accordion-collapse collapse hide" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div id="collapseTwo" class="accordion-collapse collapse hide" aria-labelledby="headingTwo" data-bs-parent="#faq-accordion">
                         <div class="accordion-body">
                             Needs copy.
                         </div>
@@ -105,7 +107,7 @@
                         What is the weight capacity for chairs in the POLYWOOD dining sets?
                         </button>
                     </h2>
-                    <div id="collapseThree" class="accordion-collapse collapse hide" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div id="collapseThree" class="accordion-collapse collapse hide" aria-labelledby="headingThree" data-bs-parent="#faq-accordion">
                         <div class="accordion-body">
                             Needs copy.
                         </div>
@@ -117,7 +119,7 @@
                         Do the tables in POLYWOOD dining sets come with holes for umbrellas?
                         </button>
                     </h2>
-                    <div id="collapseFour" class="accordion-collapse collapse hide" aria-labelledby="headingFour" data-bs-parent="#accordionExample">
+                    <div id="collapseFour" class="accordion-collapse collapse hide" aria-labelledby="headingFour" data-bs-parent="#faq-accordion">
                         <div class="accordion-body">
                             Needs copy.
                         </div>
@@ -129,7 +131,7 @@
                         Do the tables in POLYWOOD dining sets come with holes for umbrellas?
                         </button>
                     </h2>
-                    <div id="collapseFive" class="accordion-collapse collapse hide" aria-labelledby="headingFive" data-bs-parent="#accordionExample">
+                    <div id="collapseFive" class="accordion-collapse collapse hide" aria-labelledby="headingFive" data-bs-parent="#faq-accordion">
                         <div class="accordion-body">
                             Needs copy.
                         </div>
@@ -141,7 +143,7 @@
                         How do you remove the center plug from a dining table to reveal the umbrella hole?
                         </button>
                     </h2>
-                    <div id="collapseSix" class="accordion-collapse collapse hide" aria-labelledby="headingSix" data-bs-parent="#accordionExample">
+                    <div id="collapseSix" class="accordion-collapse collapse hide" aria-labelledby="headingSix" data-bs-parent="#faq-accordion">
                         <div class="accordion-body">
                             Needs copy.
                         </div>
@@ -153,7 +155,7 @@
                         Are POLYWOOD dining sets easy to clean?
                         </button>
                     </h2>
-                    <div id="collapseSeven" class="accordion-collapse collapse hide" aria-labelledby="headingSeven" data-bs-parent="#accordionExample">
+                    <div id="collapseSeven" class="accordion-collapse collapse hide" aria-labelledby="headingSeven" data-bs-parent="#faq-accordion">
                         <div class="accordion-body">
                             Needs copy.
                         </div>
@@ -165,7 +167,7 @@
                         Can you paint or stain POLYWOOD dining sets?
                         </button>
                     </h2>
-                    <div id="collapseEight" class="accordion-collapse collapse hide" aria-labelledby="headingEight" data-bs-parent="#accordionExample">
+                    <div id="collapseEight" class="accordion-collapse collapse hide" aria-labelledby="headingEight" data-bs-parent="#faq-accordion">
                         <div class="accordion-body">
                             Needs copy.
                         </div>
@@ -177,7 +179,7 @@
                         Can you fit more chairs around POLYWOOD dining tables than the number of chairs the set comes with?
                         </button>
                     </h2>
-                    <div id="collapseNine" class="accordion-collapse collapse hide" aria-labelledby="headingNine" data-bs-parent="#accordionExample">
+                    <div id="collapseNine" class="accordion-collapse collapse hide" aria-labelledby="headingNine" data-bs-parent="#faq-accordion">
                         <div class="accordion-body">
                             Needs copy.
                         </div>
@@ -189,7 +191,7 @@
                         What seat cushions fit POLYWOOD dining chairs?
                         </button>
                     </h2>
-                    <div id="collapseTen" class="accordion-collapse collapse hide" aria-labelledby="headingTen" data-bs-parent="#accordionExample">
+                    <div id="collapseTen" class="accordion-collapse collapse hide" aria-labelledby="headingTen" data-bs-parent="#faq-accordion">
                         <div class="accordion-body">
                             Needs copy.
                         </div>
@@ -402,4 +404,5 @@
             </div>
         </div>
     </body>
+    <script src="/css/bootstrap-5.0.2-dist/js/bootstrap.min.js" rel="javascript" type="text/javascript"/>
 </html>
