@@ -1,16 +1,4 @@
 /** Re-arranged these Stylings to reflect MOBILE first best practices since it is far easier to modify a working layout for mobile to change for desktop */
-/**@font-face {
-    font-family:'Gotham Rounded';
-    src:  url(fonts/GothamRounded-Bold.otf) format('opentype');
-    font-weight: 600;
-    font-style: normal;
-}
-@font-face {
-    font-family:'Gotham Rounded' ;
-    src:  url(fonts/GothamRounded-BoldItalic.otf) format('opentype');
-    font-weight: 600;
-    font-style: italic;
-}*/
 @font-face {
     font-family:'Gotham Rounded';
     src:  url(fonts/GothamRounded-Medium.otf) format('opentype');
@@ -128,10 +116,10 @@
 .row {
     margin-top: 20px;
 }
-#why-polywood {
+.why-polywood img {
     max-width: 100%;
 }
-#why-polywood p {
+.why-polywood p {
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 18px/var(--unnamed-line-spacing-39) var(--unnamed-font-family-gotham-rounded);
     color: var(--unnamed-color-55565a);
     text-align: left;
@@ -181,8 +169,9 @@
     text-align: center;
     letter-spacing: 0.92px;
     color: #55565A;
+    margin-bottom: 20px;
 }
-.testimonial-image {
+.testimonial-image img{
     max-width: 100%;
 }
 .testimonial-name {
@@ -233,11 +222,17 @@
 .accordion-button:after {
     color: #707070;
 }
+.accordion-button[aria-expanded=false]{
+    text-decoration: underline;
+}
 .inlay-testimonial {
     background-color:  var(--light-grey);
+    padding: 10px;
 }
-.inlay-testimonial-image {
+.inlay-testimonial-image img {
     max-width: 100%;
+    margin: 0 auto;
+    align-self: center;
 }
 .inlay-testimonial-text {
     font: var(--unnamed-font-style-italic) normal var(--unnamed-font-weight-normal) 25px/var(--unnamed-line-spacing-39) var(--unnamed-font-family-gotham-rounded);
@@ -248,15 +243,17 @@
     color: #55565A;
     opacity: 1;
 }
-.white-dining-sets {
-    background: transparent url('/assets/white.png') 0% 0% no-repeat padding-box;
+.dining-sets {
+    
     opacity: 1;
-    width: 364px;
-    height: 291px;
+    width: 100%;
     background-position: center;
     margin: 0 auto;
 }
-.white-dining-sets + button {
+.dining-sets img {
+    max-width:100%;
+}
+.dining-sets + button {
     background: #F5F5F5 0% 0% no-repeat padding-box;
     opacity: 1;
     font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-medium) var(--unnamed-font-size-19)/23px var(--unnamed-font-family-gotham-rounded);
@@ -267,34 +264,7 @@
     text-transform: uppercase;
     opacity: 1;
 }
-.slate-grey-dining-sets {
-    background: transparent url('/assets/PWS260-1-GY-ST.png') 0% 0% no-repeat padding-box;
-    opacity: 1;
-    width: 364px;
-    height: 291px;
-    background-position: center;
-    margin: 0 auto;
-}
-.slate-grey-dining-sets + button {
-    background: #6F6F6F 0% 0% no-repeat padding-box;
-    opacity: 1;
-    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-medium) var(--unnamed-font-size-19)/23px var(--unnamed-font-family-gotham-rounded);
-    color: var(--light-grey);
-    text-align: center;
-    font: normal normal medium 19px/23px Gotham Rounded;
-    letter-spacing: 0px;
-    color: #F6F6F6;
-    text-transform: uppercase;
-    opacity: 1;
-}
-.black-dining-sets {
-    background: transparent url('/assets/PWS340-1-BL-ST.png') 0% 0% no-repeat padding-box;
-    opacity: 1;
-    width: 364px;
-    height: 291px;
-    background-position: center;
-    margin: 0 auto;
-}
+ 
 .black-dining-sets + button {
     background: #2F2F2F 0% 0% no-repeat padding-box;
     opacity: 1;
@@ -337,27 +307,10 @@
 .outdoor-dining-header {
     margin-top:52px;
 }
-#on-the-patio {
-    background: transparent url('/assets/PWS121-1-GY-LI-1.png') 0% 0% no-repeat padding-box;
-    opacity: 1;
-    width: 397px;
-    height: 278px;
-    margin: 0 auto;
+.themed-set img {
+    max-width: 100%;
 }
-#by-the-pool {
-    background: transparent url('/assets/PWS261-1-WH-LI-1.png') 0% 0% no-repeat padding-box;
-    opacity: 1;
-    width: 397px;
-    height: 278px;
-    margin: 0 auto;
-}
-#on-the-front-porch {
-    background: transparent url('/assets/PWS156-1-SA902-LI-1.png') 0% 0% no-repeat padding-box;
-    opacity: 1;
-    width: 397px;
-    height: 278px;
-    margin: 0 auto;
-}
+
 .product-type {
     margin-top: 10px;
 }
@@ -379,17 +332,46 @@ button.shop.all-dining-sets {
     text-transform: uppercase;
     opacity: 1;
 }
-.footer-banner {
-    margin-top: 20px;
-    background: transparent url('/assets/Group 139.png') 0% 0% no-repeat padding-box;
-    opacity: 1;
+.footer-banner-content {
     width: 100%;
     height: 363px;
+    display: flex;
+    background: url("/assets/DiningSets.png");;
+    flex-direction: column;
+    padding-top: 50px;
+    font-family: Gotham Rounded;
+    text-transform: uppercase;
+    align-items: center;
+}
+#large-banner-text {
+    color: #fff;
+    font-size: 28px;
+}
+
+#small-banner-text {
+    color: #fff;
+    font-size: 18px;
+}
+#banner-button {
+    border: 1px solid var(--dark-grey);
+    border: 1px solid #4A4A4A;
+    border-radius: 5px;
+    opacity: 1;
+    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-medium) 14px/19px var(--unnamed-font-family-gotham-rounded);
+    color: var(--dark-grey);
+    text-align: center;
+    font: normal normal medium 14px/19px Gotham Rounded;
+    letter-spacing: 1.02px;
+    color: #4A4A4A;
+    text-transform: uppercase;
+    padding: 5px;
+    align-self: center;
+    display: inline-flex;
 }
 .round-thumb {
     width: 125px;
     height: 125px;
-    float: left;
+    margin:  0 auto;
 }
 .review1 {
     background: transparent url('/assets/lakeside-7-piece-farmhouse-dining-set-review.png') 0% 0% no-repeat padding-box;
@@ -406,41 +388,26 @@ button.shop.all-dining-sets {
     border: 2px solid #FAFAFA;
     opacity: 1;
 }
-.stars {
-    width: 80px;
-    height: 20px;
+.review-content li {
+    list-style-type: none;
+}
+.review-caption {
+    font-size: 18px;
+}
+.review-quote {
+    font-size:  14px;
+}
+.review-name {
+    font-size: 10px;
 }
 .star {
-    background:0% 0% no-repeat padding-box;
-    width: 17px;
-    height: 16px;
-    opacity: 1;
-    margin-left: 2px;
-    float: left;
+    display: inline;
 }
-.review {
-    display: block;
+.star:after {
+    content: "\2605";
+    color: yellow;
+    font-size: 14px;
 }
-.review-content {
-    float: left;
-    margin-left: 5px;
-}
-.review-content .quote {
-    font: var(--unnamed-font-style-normal) normal var(--unnamed-font-weight-normal) 12px/19px var(--unnamed-font-family-gotham-rounded);
-    color: var(--unnamed-color-55565a);
-    text-align: left;
-    font: normal normal normal 12px/19px Gotham Rounded;
-    letter-spacing: 0.4px;
-    color: #55565A;
-    opacity: 1;
-    max-width: 240px;
-}
-.float-clear {
-    float: none;
-    clear: both;
-    width: 100%;
-}
-/* Star Rating */
 
 .rating-box {
   color: var(--star-default-color);
@@ -484,6 +451,15 @@ button.shop.all-dining-sets {
 }
 
 /* Place Desktop Only CSS Below */
-@media screen and (min-width:  1024px) {
-
+@media screen and (max-width:  1024px) {
+    .-quote-text {
+        font-size: 18px; 
+    }
+    #large-banner-text {
+        font-size: 14px;
+        word-wrap: break-word;
+    }
+    #small-banner-text {
+        font-size: 10px;
+    }
 }
